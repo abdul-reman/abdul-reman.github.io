@@ -39,6 +39,23 @@
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+  <style>
+  /* Sirf mobile screens ke liye chatbot button aur window ko upar shift karne ka code */
+  @media screen and (max-width: 768px) {
+    /* 1. Chatbot ka chota gol button mobile par upar karne ke liye */
+    #voiceflow-chat-frame button, 
+    div[class*="v-bubble"], 
+    iframe[id*="voiceflow-chat"] {
+      bottom: 90px !important; /* Is 90px ko aap barha kar 100px ya 120px bhi kar sakte hain agar aapka mobile menu zyada bada hai */
+    }
+
+    /* 2. Chatbot jab khule toh uski poori chat window bhi menu se upar rahe */
+    #voiceflow-chat-frame iframe,
+    div[class*="v-widget-window"] {
+      bottom: 160px !important; /* Chat window ki mobile position */
+    }
+  }
+</style>
   
   <body>
 

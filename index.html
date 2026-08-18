@@ -39,40 +39,6 @@
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
-<!-- 1. Retell AI Web Call Widget Frontend Library -->
-<script src="https://api.retellai.com/embed.js" defer>/>
-
-<script>
-  window.addEventListener('load', function() {
-    if (window.RetellWebWidget) {
-      window.RetellWebWidget.init({
-        // 🔥 AAPKI ASLI KEYS INJECT HO CHUKI HAIN
-        publicKey: 'public_key_3275f1e5043e2da9abab4', 
-        agentId: 'agent_177613374402c8589965cab828', 
-        
-        // Custom Alignment & Premium Dark Theme (#1E1E1F)
-        config: {
-          title: "Digital Sheikh Voice Demo",
-          welcomeMessage: "Assalam-o-Alaikum! Main Abdur Rahman ka AI Voice Assistant hoon. Kya aap mere sath live audio call par baat karna chahenge?",
-          primaryColor: "#1E1E1F", 
-          buttonIcon: "phone",     
-          speechToText: true       
-        }
-      });
-    }
-  });
-</script>
-
-<!-- Mobile Menu Layout Adjustments (Taake mobile navigation bar se upar rahe) -->
-<style>
-  @media screen and (max-width: 768px) {
-    #retell-web-widget-trigger, 
-    .retell-widget-bubble,
-    div[class*="retell"] {
-      bottom: 110px !important; 
-    }
-  }
-</style>  
   <body>
 
   <!--
@@ -1805,7 +1771,49 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- Retell AI Web Call Frontend Core Widget -->
+<!-- Retell AI Web Call Widget -->
+<script src="https://api.retellai.com/embed.js" defer></script>
+
+<script>
+window.addEventListener('load', function () {
+
+    setTimeout(function () {
+
+        if (window.RetellWebWidget && !window.retellInitialized) {
+
+            window.retellInitialized = true;
+
+            window.RetellWebWidget.init({
+                publicKey: "public_key_3275f1e5043e2da9bab4",
+                agentId: "agent_177613374402c8589965cab828",
+
+                config: {
+                    title: "Digital Sheikh Voice Demo",
+                    welcomeMessage: "Assalam-o-Alaikum! Main Abdur Rahman ka AI Voice Assistant hoon.",
+                    primaryColor: "#1E1E1F",
+                    buttonIcon: "phone",
+                    speechToText: true
+                }
+            });
+
+        }
+
+    }, 2000);
+
+});
+</script>
+
+<!-- Mobile Menu Layout Adjustments (Taake mobile navigation bar se upar rahe) -->
+<style>
+  @media screen and (max-width: 768px) {
+    #retell-web-widget-trigger, 
+    .retell-widget-bubble,
+    div[class*="retell"] {
+      bottom: 110px !important; 
+    }
+  }
+</style>  
+
 </body>
 
 </html>

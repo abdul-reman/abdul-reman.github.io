@@ -1789,6 +1789,32 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <!-- Retell AI Web Call Frontend Core Widget -->
+<script src="https://retellai.com" defer></script>
+
+<script>
+  window.addEventListener('load', function() {
+    if (window.RetellWebWidget) {
+      window.RetellWebWidget.init({
+        // 1. Jo Key Value aapko "+ Add Key" daba kar mili hai, use yahan paste karein
+        publicKey: public_key_3275f1e5043e2da9abab4, 
+        
+        // 2. Apne calling agent ki ID yahan paste karein (Jo pehli screen par thi)
+        agentId: agent_177613374402c8589965cab828, 
+        
+        // 3. UI Customization & Theme Setup (#1E1E1F)
+        config: {
+          title: "Digital Sheikh Voice Demo",
+          welcomeMessage: "Assalam-o-Alaikum! Main Abdur Rahman ka AI Virtual Receptionist hoon. Kya aap mujh se live phone call par baat karna chahenge?",
+          primaryColor: "#1E1E1F", // Aapka bataya hua custom dark color theme
+          buttonIcon: "phone",     // Icon jo floating bubble par dikhega
+          speechToText: true       // Browser mic auto-support default on
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 
 </html>

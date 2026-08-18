@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<!-- Dify Chatbot Core Settings -->
+<!-- 1. Dify Chatbot Configuration (Aapka Token) -->
 <script>
  window.difyChatbotConfig = {
   token: 'w1C21HxVJ6l7KobL',
@@ -34,54 +34,48 @@
   userVariables: {},
  }
 </script>
+
+<!-- 2. Core JavaScript Link -->
 <script
  src="https://udify.app"
  id="w1C21HxVJ6l7KobL"
  defer>
 </script>
 
-<!-- Custom Theme, Layout & Branding Removal Styling -->
+<!-- 3. Safe CSS Styling (No Hide/No Break) -->
 <style>
-  /* 1. Main Chatbot Window Configuration */
+  /* Chatbot ki Main Window ka Size aur Position */
   #dify-chatbot-bubble-window {
-    width: 420px !important;            /* Desktop par bada premium size */
-    height: 70vh !important;            /* Responsive height */
-    max-height: 650px !important;       /* Top bar ko chhupne se bachane ke liye cap */
-    min-height: 400px !important;
+    width: 400px !important;            /* Desktop par fit aur behtareen size */
+    height: 600px !important;           /* Standard height jo top bar ko nahi chhupegi */
     position: fixed !important;
-    bottom: 95px !important;            /* Chat button ke upar perfectly align */
-    right: 20px !important;             /* Right side se perfect margin */
-    z-index: 999999 !important;         /* Website ke baqi elements se upar */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;        /* Border angles ko smooth rakhne ke liye */
+    bottom: 95px !important;            /* Chat button ke upar alignment */
+    right: 20px !important;             /* Right corner se margin */
+    z-index: 999999 !important;         /* Taake hamesha sabse upar dikhe */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    border-radius: 16px !important;
   }
 
-  /* 2. Powered by Dify Branding Hiding Trick (Iframe Bottom Cropping) */
-  #dify-chatbot-bubble-window iframe {
-    height: calc(100% + 45px) !important; /* Window ko niche se thoda lamba kiya */
-    margin-bottom: -45px !important;       /* Niche wale 45px (Branding Area) ko screen se bahar push kar diya */
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-  }
-
-  /* 3. Custom Dark Floating Button (#1E1E1F) */
+  /* Floating Round Button Customization (#1E1E1F) */
   #dify-chatbot-bubble-button {
-    background-color: #1E1E1F !important; /* Aapka bataya hua custom premium black color */
+    background-color: #1E1E1F !important; /* Aapka bataya hua charcoal black color */
     position: fixed !important;
-    bottom: 20px !important;            /* Screen ke bottom corner mein positioning */
-    right: 20px !important;             
-    width: 60px !important;             /* Gol icon ka standard size */
+    bottom: 20px !important;            /* Niche se perfect gap */
+    right: 20px !important;             /* Right corner configuration */
+    width: 60px !important;             /* Circular size button */
     height: 60px !important;            
-    border-radius: 50% !important;      /* Mukammal perfect circle */
+    border-radius: 50% !important;      /* Perfect circle shape */
     z-index: 999999 !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    transition: transform 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    display: flex !important;           /* Button ko force display karne ke liye */
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  /* Button par mouse le jaane se halka sa zoom effect */
-  #dify-chatbot-bubble-button:hover {
-    transform: scale(1.05) !important;
+  /* Powered by Dify ko hide karne ka sabse safe iframe tareeqa */
+  #dify-chatbot-bubble-window iframe {
+    height: calc(100% + 40px) !important;
+    margin-bottom: -40px !important;
   }
 </style>  
   <body>

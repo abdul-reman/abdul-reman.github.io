@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+<!-- Dify Chatbot Core Settings -->
 <script>
  window.difyChatbotConfig = {
   token: 'w1C21HxVJ6l7KobL',
@@ -34,33 +35,53 @@
  }
 </script>
 <script
- src="https://udify.app/embed.min.js"
+ src="https://udify.app"
  id="w1C21HxVJ6l7KobL"
  defer>
 </script>
 
+<!-- Custom Theme, Layout & Branding Removal Styling -->
 <style>
-  /* 1. Chatbot ka khulne wala window ka size chhota aur set karna */
+  /* 1. Main Chatbot Window Configuration */
   #dify-chatbot-bubble-window {
-    width: 380px !important;    /* Width ko chhota kiya */
-    height: 550px !important;   /* Height ko bilkul set kiya */
-    bottom: 90px !important;    /* Icon se thoda upar khule ga */
-    right: 20px !important;     /* Right side par alignment */
+    width: 420px !important;            /* Desktop par bada premium size */
+    height: 70vh !important;            /* Responsive height */
+    max-height: 650px !important;       /* Top bar ko chhupne se bachane ke liye cap */
+    min-height: 400px !important;
     position: fixed !important;
-    z-index: 999999 !important;
+    bottom: 95px !important;            /* Chat button ke upar perfectly align */
+    right: 20px !important;             /* Right side se perfect margin */
+    z-index: 999999 !important;         /* Website ke baqi elements se upar */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;        /* Border angles ko smooth rakhne ke liye */
   }
 
-  /* 2. Chatbot ka button (Icon) niche corner mein fit karna */
+  /* 2. Powered by Dify Branding Hiding Trick (Iframe Bottom Cropping) */
+  #dify-chatbot-bubble-window iframe {
+    height: calc(100% + 45px) !important; /* Window ko niche se thoda lamba kiya */
+    margin-bottom: -45px !important;       /* Niche wale 45px (Branding Area) ko screen se bahar push kar diya */
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  /* 3. Custom Dark Floating Button (#1E1E1F) */
   #dify-chatbot-bubble-button {
-    background-color: #1C64F2 !important; /* Blue color jo aap badal bhi sakte hain */
+    background-color: #1E1E1F !important; /* Aapka bataya hua custom premium black color */
     position: fixed !important;
-    bottom: 20px !important;    /* Niche se gap */
-    right: 20px !important;     /* Right side se gap */
-    width: 60px !important;     /* Gol button ka size */
-    height: 60px !important;    /* Gol button ka size */
-    border-radius: 50% !important; /* Button ko mukammal gol (circle) karne ke liye */
+    bottom: 20px !important;            /* Screen ke bottom corner mein positioning */
+    right: 20px !important;             
+    width: 60px !important;             /* Gol icon ka standard size */
+    height: 60px !important;            
+    border-radius: 50% !important;      /* Mukammal perfect circle */
     z-index: 999999 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Halki si shadow professional look ke liye */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  /* Button par mouse le jaane se halka sa zoom effect */
+  #dify-chatbot-bubble-button:hover {
+    transform: scale(1.05) !important;
   }
 </style>  
   <body>

@@ -34,47 +34,35 @@
  }
 </script>
 <script
- src="https://udify.app"
+ src="https://udify.app/embed.min.js"
  id="w1C21HxVJ6l7KobL"
  defer>
 </script>
 
 <style>
-  /* 1. Chatbot Window Configuration (Desktop and Responsiveness Fix) */
+  /* 1. Chatbot ka khulne wala window ka size chhota aur set karna */
   #dify-chatbot-bubble-window {
-    width: 420px !important;            /* Aapke mutabiq bada size desktop ke liye */
-    height: 70vh !important;            /* Pure screen ke hisab se responsive height */
-    max-height: 650px !important;       /* Max height cap ki taake top bar screen se bahar na jaye */
-    min-height: 400px !important;
+    width: 380px !important;    /* Width ko chhota kiya */
+    height: 550px !important;   /* Height ko bilkul set kiya */
+    bottom: 90px !important;    /* Icon se thoda upar khule ga */
+    right: 20px !important;     /* Right side par alignment */
     position: fixed !important;
-    bottom: 95px !important;            /* Icon ke bilkul upar perfectly set */
-    right: 20px !important;             /* Right side se gap */
-    z-index: 999999 !important;         /* Taake website ke har element ke upar rahe */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;        /* Top bar ko katne se bachaane ke liye */
-  }
-
-  /* 2. Floating Bubble Button Customization */
-  #dify-chatbot-bubble-button {
-    background-color: #1E1E1F !important; /* Aapka bataya hua custom color code */
-    position: fixed !important;
-    bottom: 20px !important;            /* Screen ke niche fit karne ke liye */
-    right: 20px !important;             /* Right corner configuration */
-    width: 60px !important;             /* Standard circular icon width */
-    height: 60px !important;            /* Standard circular icon height */
-    border-radius: 50% !important;      /* Mukammal gol (circle) icon look */
     z-index: 999999 !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    transition: transform 0.2s ease !important;
   }
 
-  /* Hover effect taake user ko pata chale click karna hai */
-  #dify-chatbot-bubble-button:hover {
-    transform: scale(1.05) !important;
+  /* 2. Chatbot ka button (Icon) niche corner mein fit karna */
+  #dify-chatbot-bubble-button {
+    background-color: #1E1E1F !important; /* Blue color jo aap badal bhi sakte hain */
+    position: fixed !important;
+    bottom: 20px !important;    /* Niche se gap */
+    right: 20px !important;     /* Right side se gap */
+    width: 60px !important;     /* Gol button ka size */
+    height: 60px !important;    /* Gol button ka size */
+    border-radius: 50% !important; /* Button ko mukammal gol (circle) karne ke liye */
+    z-index: 999999 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Halki si shadow professional look ke liye */
   }
-</style>
-  
+</style>  
   <body>
 
   <!--

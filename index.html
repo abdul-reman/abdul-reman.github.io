@@ -24,45 +24,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<script>
- window.difyChatbotConfig = {
-  token: 'w1C21HxVJ6l7KobL',
-  baseUrl: 'https://udify.app',
-  inputs: {},
-  systemVariables: {},
-  userVariables: {},
- }
-</script>
-<script
- src="https://udify.app/embed.min.js"
- id="w1C21HxVJ6l7KobL"
- defer>
-</script>
-
-<style>
-  /* 1. Chatbot ka khulne wala window ka size chhota aur set karna */
-  #dify-chatbot-bubble-window {
-    width: 380px !important;    /* Width ko chhota kiya */
-    height: 550px !important;   /* Height ko bilkul set kiya */
-    bottom: 90px !important;    /* Icon se thoda upar khule ga */
-    right: 20px !important;     /* Right side par alignment */
-    position: fixed !important;
-    z-index: 999999 !important;
-  }
-
-  /* 2. Chatbot ka button (Icon) niche corner mein fit karna */
-  #dify-chatbot-bubble-button {
-    background-color: #1E1E1F !important; /* Blue color jo aap badal bhi sakte hain */
-    position: fixed !important;
-    bottom: 20px !important;    /* Niche se gap */
-    right: 20px !important;     /* Right side se gap */
-    width: 60px !important;     /* Gol button ka size */
-    height: 60px !important;    /* Gol button ka size */
-    border-radius: 50% !important; /* Button ko mukammal gol (circle) karne ke liye */
-    z-index: 999999 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Halki si shadow professional look ke liye */
-  }
-</style>  
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6a84a7f625a37eb9672224c1' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>  
+  
   <body>
 
   <!--
